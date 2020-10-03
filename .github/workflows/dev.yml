@@ -1,0 +1,22 @@
+name: build
+
+on:
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: test
+      run: |
+        pwd
+        echo "test file" > test.out
+        ls -al
+    - name: list
+      run: |
+        pwd
+        ls -al
