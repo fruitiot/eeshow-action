@@ -1,11 +1,11 @@
-name: Docker
+name: release
 on:
   push:
     tags:
       - v*
 
 jobs:
-  path-context:
+  release:
     runs-on: ubuntu-latest
     steps:
       -
